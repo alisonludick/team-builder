@@ -1,24 +1,37 @@
 import React from 'react';
 
 function Form(props) {
-    // what data does the form need to populate itself?
-    // what callbacks does the form need to perform
-    // its basic functions of updating fields and submitting?
+
+  const { onNameChange, onEmailChange, onRoleChange, onFormSubmit } = props;
+  const { name, email, role } = props.teamForm;
+  
   
     return (
       <form>
         <label htmlFor='nameInput'>Name</label>
-        <input id='nameInput' type='text' />
+        <input 
+        value={name}
+        onChange={onNameChange}
+        id='nameInput' 
+        type='text' />
   
         <label htmlFor='emailInput'>Email</label>
-        <input id='emailInput' type='text' />
+        <input 
+        value={email}
+        onChange={onEmailChange}
+        id='emailInput' 
+        type='text' />
 
         <label htmlFor='roleInput'>Role</label>
-        <input id='roleInput' type='text' />
+        <input 
+        value={role}
+        onChange={onRoleChange}
+        id='roleInput' 
+        type='text' />
   
         <button
           disabled={false}
-          onClick={e => e.preventDefault()}
+          onClick={onFormSubmit}
         >
           submit
           </button>
