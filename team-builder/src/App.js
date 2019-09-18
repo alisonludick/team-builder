@@ -70,7 +70,7 @@ export default function App(props) {
       // data we need to hydrate the form inputs
       teamForm={teamForm}/>
       {
-        initialTeamList.map(friend => (
+        teamList.map(friend => (
           <h5 key={friend.id}>
             {friend.name} is a {friend.role} and can be contacted at {friend.email}.
           </h5>
