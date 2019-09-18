@@ -59,7 +59,8 @@ export default function App(props) {
   };
 
   return (
-    <div className='container-hello-world'>
+    <div className='App'>
+      <h1>Team List</h1>
       <Form 
       // handlers that can change app state
       onNameChange={onNameChange}

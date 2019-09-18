@@ -27,9 +27,9 @@ function Form(props) {
         value={role}
         onChange={onRoleChange}
         id='roleInput' 
-        type='text' />
+        type='text' /><br></br>
   
-        <button
+        <button className="buttonstyle"
           disabled={false}
           onClick={onFormSubmit}
         >
